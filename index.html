@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raisya Adha 🌹</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Great+Vibes&family=Montserrat:wght@200;300;400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── CUSTOM CURSOR ── -->
+  <div class="cursor"      id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- ── AUDIO PERMISSION POPUP ── -->
+  <div id="audio-popup">
+    <div class="popup-box">
+      <span class="popup-icon">🎵</span>
+      <div class="popup-title">Raisya Adha</div>
+      <div class="popup-sub">A Love Story</div>
+      <p class="popup-desc">
+        Biarkan melodi menemani setiap kata yang tertulis untukmu,<br/>
+        karena cinta ini layak didengar, bukan hanya dibaca sayanggg
+      </p>
+      <button class="popup-btn" onclick="startExperience()">✦ Mulai Perjalanan ✦</button>
+    </div>
+  </div>
+
+  <!-- ── ANIMATED BACKGROUND ── -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Glow orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- Falling petals layer -->
+  <div class="petal-layer" id="petals"></div>
+
+  <!-- ── BACKGROUND MUSIC ── -->
+  <!-- Replace the src with your own MP3 file path, e.g. src="music/lagu.mp3" -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="dandelions.mp3" type="audio/mpeg"/>
+  </audio>
+
+  <!-- ── FLOATING MUSIC PLAYER ── -->
+  <div class="music-player" id="music-player">
+    <button class="play-btn" id="play-btn" onclick="toggleMusic()">▶</button>
+    <div class="music-info">
+      <div class="music-title">Serenade For You</div>
+      <div class="music-artist">♪ Raisya's Song ♪</div>
+    </div>
+    <div class="music-bars" id="music-bars">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════ -->
+  <!--           MAIN CONTENT            -->
+  <!-- ══════════════════════════════════ -->
+  <main>
+
+    <!-- ── HERO ── -->
+    <div class="hero">
+      <p class="hero-eyebrow">✦ untuk dia yang selalu di hati ✦</p>
+      <h1 class="hero-title">Raisya Adha</h1>
+      <p class="hero-subtitle">Bunga di Taman Hatiku</p>
+      <div class="divider"></div>
+      <p class="hero-quote">
+        "Dalam setiap hembusan angin, aku mendengar namamu.<br/>
+        Dalam setiap bintang malam, aku melihat senyummu."
+      </p>
+
+      <!-- Scroll hint: absolute-centered, uses its own keyframe -->
+      <div class="scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </div>
+
+    <!-- ── TENTANG RAISYA ── -->
+    <section>
+      <p class="section-label">✦ Siapa Dia ✦</p>
+      <h2 class="section-title">Tentang Raisya</h2>
+      <p class="section-text">
+        Ada wanita yang hadir bukan hanya dalam pandangan, tapi meresap ke dalam jiwa.
+        Raisya Adha adalah salah satu dari mereka — perempuan dengan mata yang menyimpan
+        semesta, senyum yang bisa menghentikan waktu, dan hati yang hangat seperti
+        sinar matahari pagi.
+      </p>
+
+      <div class="traits">
+        <div class="trait-card">
+          <span class="trait-icon">🌸</span>
+          <div class="trait-title">Kelembutan</div>
+          <div class="trait-desc">Setiap kata darinya terasa seperti angin sepoi yang menenangkan jiwa.</div>
+        </div>
+        <div class="trait-card">
+          <span class="trait-icon">✨</span>
+          <div class="trait-title">Cahaya</div>
+          <div class="trait-desc">Kehadirannya menerangi ruangan tanpa perlu bersuara keras.</div>
+        </div>
+        <div class="trait-card">
+          <span class="trait-icon">🦋</span>
+          <div class="trait-title">Kebebasan</div>
+          <div class="trait-desc">Seperti kupu-kupu, ia indah ketika menjadi dirinya sendiri.</div>
+        </div>
+        <div class="trait-card">
+          <span class="trait-icon">🌙</span>
+          <div class="trait-title">Kedalaman</div>
+          <div class="trait-desc">Di balik diamnya tersimpan lautan perasaan yang tak bertepi.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── LOVE LETTER ── -->
+    <section>
+      <p class="section-label">✦ Sepucuk Surat ✦</p>
+      <h2 class="section-title">Untuk Raisya</h2>
+
+      <div class="love-letter">
+        <p class="love-letter-text">
+          Raisya...<br/><br/>
+          Aku tidak tahu kapan persisnya kamu mulai menghuni setiap sudut pikiranku.
+          Yang aku tahu, pagi-pagiku terasa lebih berarti sejak mengenalmu. (kocak)
+          Tawa kecilmu menjadi lagu favoritku tanpa kusadari.<br/><br/>
+          Kamu adalah jenis keindahan yang tidak butuh filter, tidak butuh pencahayaan sempurna.
+          Kamu hanya perlu hadir — dan semua terasa cukup, bahkan lebih dari cukup.<br/><br/>
+          Jika ada satu hal yang ingin kukatakan padamu hari ini,
+          itu adalah betapa beruntungnya dunia ini memilikimu.
+          Dan betapa beruntungnya aku, bisa mengenalmu.
+        </p>
+        <div class="love-letter-sig">— Untukmu, selalu 🌹</div>
+      </div>
+    </section>
+
+    <!-- ── PUISI ── -->
+    <section>
+      <p class="section-label">✦ Untaian Kata ✦</p>
+      <h2 class="section-title">Puisi Untukmu</h2>
+
+      <div class="poem-lines">
+        <span class="highlight">Raisya</span>, namamu seperti...<br/>
+        yang tanpa sadar selalu kulafalkan<br/>
+        di antara napas dan denyut nadi<br/><br/>
+        Kamu adalah <span class="highlight">hujan pertama</span><br/>
+        yang tidak membuat basah, tapi menyejukkan<br/>
+        hingga ke bagian terdalam kalbu<br/><br/>
+        Dan di setiap malam yang sepi<br/>
+        aku menemukan <span class="highlight">cahayamu</span><br/>
+        seperti bintang yang setia<br/>
+        menunggu fajar tiba<br/><br/>
+        <span class="highlight">— Adha,</span> selalu milikku ~Risky~ 🌹
+      </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <span class="footer-heart">💗</span>
+      <div class="footer-name">Raisya Adha</div>
+      <div class="footer-year">✦ Selamanya &amp; Selamanya ✦</div>
+    </footer>
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
